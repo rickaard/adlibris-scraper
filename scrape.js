@@ -12,7 +12,7 @@ const getPricesForBooks = async (booksArray) => {
         await page.goto(adlibrisURL);
 
         for (let i = 0; i < booksCopy.length; i++) {
-            // console.log(`${i}/${20}`)
+            console.log(`${i}/${booksCopy.length}`)
             await page.click('.page-header__search__input', { clickCount: 3 });
             await page.keyboard.press('Backspace');
             await page.type('.page-header__search__input', booksCopy[i].Title + ' ' + booksCopy[i].Author);
